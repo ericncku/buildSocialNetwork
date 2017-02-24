@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C677C6C1E60640A004EF795 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C6B1E60640A004EF795 /* CircleView.swift */; };
 		0C677C6E1E606FA9004EF795 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C6D1E606FA9004EF795 /* PostCell.swift */; };
+		0C677C711E607BB9004EF795 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C701E607BB9004EF795 /* DataService.swift */; };
 		0CCCCF9D1E5FC317003A7220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCF9C1E5FC317003A7220 /* AppDelegate.swift */; };
 		0CCCCF9F1E5FC317003A7220 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCF9E1E5FC317003A7220 /* SigninVC.swift */; };
 		0CCCCFA21E5FC317003A7220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCCFA01E5FC317003A7220 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0C677C6B1E60640A004EF795 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		0C677C6D1E606FA9004EF795 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		0C677C701E607BB9004EF795 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0CCCCF991E5FC317003A7220 /* socialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CCCCF9C1E5FC317003A7220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CCCCF9E1E5FC317003A7220 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C677C6F1E607B6E004EF795 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0C677C701E607BB9004EF795 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		0CCCCF901E5FC317003A7220 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +88,7 @@
 		0CCCCF9B1E5FC317003A7220 /* socialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				0CCCCFD41E600BA3003A7220 /* socialNetwork.entitlements */,
+				0C677C6F1E607B6E004EF795 /* Services */,
 				0CCCCFAE1E5FC3E4003A7220 /* Util */,
 				0CCCCFB21E5FD2A7003A7220 /* View */,
 				0CCCCFB11E5FC557003A7220 /* Controller */,
@@ -92,6 +102,7 @@
 		0CCCCFAE1E5FC3E4003A7220 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0CCCCFD41E600BA3003A7220 /* socialNetwork.entitlements */,
 				0CCCCFA81E5FC317003A7220 /* Info.plist */,
 				0CCCCFAF1E5FC421003A7220 /* GoogleService-Info.plist */,
 				0CCCCFB51E5FD61E003A7220 /* Constants.swift */,
@@ -277,6 +288,7 @@
 				0CCCCFB61E5FD61E003A7220 /* Constants.swift in Sources */,
 				0CCCCFB81E5FD673003A7220 /* ShadowView.swift in Sources */,
 				0CCCCFBB1E5FD9DE003A7220 /* BorderTxtField.swift in Sources */,
+				0C677C711E607BB9004EF795 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
