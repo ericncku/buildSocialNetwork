@@ -1,0 +1,28 @@
+//
+//  PostCell.swift
+//  socialNetwork
+//
+//  Created by HOISIO LONG on 24/2/2017.
+//  Copyright © 2017年 Eric Hoi. All rights reserved.
+//
+
+import UIKit
+
+class PostCell: UITableViewCell {
+    
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var postImg: UIImageView!
+    @IBOutlet weak var caption: UITextView!
+    @IBOutlet weak var likesLbl: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    func configureCell() {
+        
+    }
+
+}
