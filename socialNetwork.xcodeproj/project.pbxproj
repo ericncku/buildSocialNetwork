@@ -13,7 +13,10 @@
 		0CCCCFA41E5FC317003A7220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCCFA31E5FC317003A7220 /* Assets.xcassets */; };
 		0CCCCFA71E5FC317003A7220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCCFA51E5FC317003A7220 /* LaunchScreen.storyboard */; };
 		0CCCCFB01E5FC421003A7220 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCCFAF1E5FC421003A7220 /* GoogleService-Info.plist */; };
-		0CCCCFB41E5FD2CB003A7220 /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCFB31E5FD2CB003A7220 /* roundButton.swift */; };
+		0CCCCFB41E5FD2CB003A7220 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCFB31E5FD2CB003A7220 /* RoundButton.swift */; };
+		0CCCCFB61E5FD61E003A7220 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCFB51E5FD61E003A7220 /* Constants.swift */; };
+		0CCCCFB81E5FD673003A7220 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCFB71E5FD673003A7220 /* ShadowView.swift */; };
+		0CCCCFBB1E5FD9DE003A7220 /* BorderTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCCFBA1E5FD9DE003A7220 /* BorderTxtField.swift */; };
 		91818AC2318C4CA93CDA6702 /* Pods_socialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802E1EF2F7C3E50CA4441C04 /* Pods_socialNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +29,10 @@
 		0CCCCFA61E5FC317003A7220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CCCCFA81E5FC317003A7220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CCCCFAF1E5FC421003A7220 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0CCCCFB31E5FD2CB003A7220 /* roundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
+		0CCCCFB31E5FD2CB003A7220 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0CCCCFB51E5FD61E003A7220 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0CCCCFB71E5FD673003A7220 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		0CCCCFBA1E5FD9DE003A7220 /* BorderTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderTxtField.swift; sourceTree = "<group>"; };
 		802E1EF2F7C3E50CA4441C04 /* Pods_socialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4288AD44698D4FF70EED91 /* Pods-socialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialNetwork/Pods-socialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		ECBF227D20911A9C981270AB /* Pods-socialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialNetwork/Pods-socialNetwork.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,9 +71,9 @@
 		0CCCCF9B1E5FC317003A7220 /* socialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				0CCCCFAE1E5FC3E4003A7220 /* Util */,
 				0CCCCFB21E5FD2A7003A7220 /* View */,
 				0CCCCFB11E5FC557003A7220 /* Controller */,
-				0CCCCFAE1E5FC3E4003A7220 /* Util */,
 				0CCCCF9C1E5FC317003A7220 /* AppDelegate.swift */,
 				0CCCCFA01E5FC317003A7220 /* Main.storyboard */,
 				0CCCCFA31E5FC317003A7220 /* Assets.xcassets */,
@@ -81,6 +87,7 @@
 			children = (
 				0CCCCFA81E5FC317003A7220 /* Info.plist */,
 				0CCCCFAF1E5FC421003A7220 /* GoogleService-Info.plist */,
+				0CCCCFB51E5FD61E003A7220 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -96,7 +103,9 @@
 		0CCCCFB21E5FD2A7003A7220 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CCCCFB31E5FD2CB003A7220 /* roundButton.swift */,
+				0CCCCFB31E5FD2CB003A7220 /* RoundButton.swift */,
+				0CCCCFB71E5FD673003A7220 /* ShadowView.swift */,
+				0CCCCFBA1E5FD9DE003A7220 /* BorderTxtField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -244,8 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CCCCF9F1E5FC317003A7220 /* SigninVC.swift in Sources */,
-				0CCCCFB41E5FD2CB003A7220 /* roundButton.swift in Sources */,
+				0CCCCFB41E5FD2CB003A7220 /* RoundButton.swift in Sources */,
 				0CCCCF9D1E5FC317003A7220 /* AppDelegate.swift in Sources */,
+				0CCCCFB61E5FD61E003A7220 /* Constants.swift in Sources */,
+				0CCCCFB81E5FD673003A7220 /* ShadowView.swift in Sources */,
+				0CCCCFBB1E5FD9DE003A7220 /* BorderTxtField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
