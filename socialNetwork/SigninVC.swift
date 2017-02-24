@@ -14,6 +14,10 @@ import FirebaseAuth
 
 class SigninVC: UIViewController {
 
+    
+    @IBOutlet weak var emailTxtField: BorderTxtField!
+    @IBOutlet weak var passwordTxtField: BorderTxtField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,6 +56,28 @@ class SigninVC: UIViewController {
             }
         })
     }
+    
+    @IBAction func signinBtnPressed(_ sender: RoundButton) {
+        
+        if let email = emailTxtField.text, let pwd = passwordTxtField.text {
+            print("\(email) and \(pwd)")
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("Email user authenticated with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("error: unabel to authenticate with Firebase using email")
+                        } else {
+                            print("Successfully authenticated and created user with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+        
+    }
+    
 
 }
 
