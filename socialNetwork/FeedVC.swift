@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -18,7 +18,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
+            print(snapshot.value)
+            
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,8 +41,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBAction func signOutBtnPressed(_ sender: RoundButton) {
-        let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
-        print("ID removed from Keychain")
+//        let keychainResult: Bool = KeychainWrapper.standard.remove(key: KEY_UID)
+        let keychainResult: Bool = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        print("ID removed from Keychain, \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToSignin", sender: nil)
         
