@@ -352,6 +352,7 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="caption" destination="hmF-yq-RNF" id="6rf-97-a3X"/>
+                                            <outlet property="likeImg" destination="WPH-rh-npm" id="Pmu-Tx-Tv0"/>
                                             <outlet property="likesLbl" destination="xCC-63-SUW" id="Rcq-SV-7ty"/>
                                             <outlet property="postImg" destination="GvG-Dm-iQm" id="Nv3-TQ-lMU"/>
                                             <outlet property="profileImg" destination="UN9-lw-eFx" id="Dtl-Xv-2Et"/>

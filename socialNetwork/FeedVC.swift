@@ -31,13 +31,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.allowsEditing = true
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            //Fix: clean all the posts for each time the posts' value have changed, eg: likes
+            self.posts = []
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
-                    print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
+                        print("ERIC: add post item")
                     }
                 }
             }
@@ -66,7 +70,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             } else {
                 cell.configureCell(post: post, img: nil)
             }
-            
+        
             return cell
             
         } else {
