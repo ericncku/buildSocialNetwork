@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var profileImg: UIImageView!
@@ -16,13 +18,17 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var likesLbl: UILabel!
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configureCell() {
-        
+    func configureCell(post: Post) {
+        self.post = post
+        self.caption.text = post.caption
+        self.likesLbl.text = "\(post.likes)"
     }
 
 }
