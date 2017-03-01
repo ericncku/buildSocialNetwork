@@ -236,6 +236,9 @@
                                                         <real key="value" value="24.5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="postBtnPressed:" destination="wwD-Pd-gXu" eventType="touchUpInside" id="NoN-6V-abB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -373,6 +376,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="Ixd-Cz-vqf" id="7an-lj-urN"/>
                         <outlet property="imageAdd" destination="uLN-g5-kMS" id="AiP-uX-RhY"/>
                         <outlet property="tableView" destination="wE7-sF-UjH" id="svN-gQ-cBg"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignin" id="Kr1-YG-HwW"/>
