@@ -58,7 +58,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                print("read image from NSCache")
+                print("read image from NSCache!")
                 
             } else {
                 cell.configureCell(post: post, img: nil)
