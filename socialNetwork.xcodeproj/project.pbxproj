@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4C65041E67CA4E0062831A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C65031E67CA4E0062831A /* User.swift */; };
 		0C677C6C1E60640A004EF795 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C6B1E60640A004EF795 /* CircleView.swift */; };
 		0C677C6E1E606FA9004EF795 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C6D1E606FA9004EF795 /* PostCell.swift */; };
 		0C677C711E607BB9004EF795 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C677C701E607BB9004EF795 /* DataService.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C4C65031E67CA4E0062831A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C677C6B1E60640A004EF795 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		0C677C6D1E606FA9004EF795 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0C677C701E607BB9004EF795 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				0CCC43111E666B09001C59CD /* Post.swift */,
+				0C4C65031E67CA4E0062831A /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				0CCCCF9D1E5FC317003A7220 /* AppDelegate.swift in Sources */,
 				0C677C6E1E606FA9004EF795 /* PostCell.swift in Sources */,
 				0CCCCFB61E5FD61E003A7220 /* Constants.swift in Sources */,
+				0C4C65041E67CA4E0062831A /* User.swift in Sources */,
 				0CCCCFB81E5FD673003A7220 /* ShadowView.swift in Sources */,
 				0CCCCFBB1E5FD9DE003A7220 /* BorderTxtField.swift in Sources */,
 				0C677C711E607BB9004EF795 /* DataService.swift in Sources */,
